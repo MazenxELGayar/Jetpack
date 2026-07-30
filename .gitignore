@@ -48,3 +48,13 @@ Archives/
 *.userprefs
 *.xcworkspace
 xcuserdata/
+
+# Android distribution signing (never commit private keys / passwords)
+*.keystore
+*.jks
+*.p12
+key.properties
+**/key.properties
+Build/Android/
+**/signing-credentials*.txt
+**/SigningConfig.xml
