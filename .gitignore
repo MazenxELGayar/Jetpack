@@ -58,3 +58,7 @@ key.properties
 Build/Android/
 **/signing-credentials*.txt
 **/SigningConfig.xml
+Config/UserEngine.ini
+Config/UserGame.ini
+Config/UserInput.ini
+Config/UserEditorPerProjectUserSettings.ini
