@@ -1,0 +1,48 @@
+CrazyKix — Make the Microsoft Store package yourself
+====================================================
+
+You already have a working .msixvc from the last build. To rebuild after changes:
+
+0) One-time checks
+   - GameDK points at F:\Unreal Engine\Microsoft\GDK\GDK_2604.2.7849\
+   - Config\UserEngine.ini exists (gitignored) with Partner Center IDs
+     (copy from Config\UserEngine.ini.example if missing)
+   - Close Unreal Editor (Live Coding blocks UAT builds) OR use Ctrl+Alt+F11
+
+1) Package (pick one)
+
+   A) Script (recommended)
+      Double-click / run:
+        Tools\GDK\Package-Win64-MSIXVC.bat
+      Faster rebuild after a successful cook:
+        Tools\GDK\Package-Win64-MSIXVC.bat -skipbuild -skipcook
+      (only if content/maps did not change)
+
+   B) Editor
+      Open CrazyKix.uproject
+      Platforms -> Windows -> Package Project
+      Shipping / For Distribution
+      With MSGameStore enabled this produces .msixvc
+
+2) Find the package
+   Primary:
+     Saved\Packages\Windows\MSGameStore\Shipping\*.msixvc
+   Copy (if script archives):
+     Packages\Win64_GDK\
+
+3) Local install test (optional)
+   Open "GDK Command Prompts" or set GameDK, then:
+     wdapp install "path\to\your.msixvc"
+     wdapp list
+     wdapp launch <AUMID from wdapp list>
+
+4) Upload yourself
+   Partner Center -> Crazy Kix -> Packages -> upload the .msixvc
+   Finish store listing / age rating / privacy, then Review and publish
+
+Notes
+  - This Partner Center product is Win32 Microsoft Store. Xbox / full Xbox services
+    still need ID@Xbox + concept approval.
+  - Placeholder logos are in Build\Windows\MSGaming\Resources\ — replace with real art
+    before final submit (Store 100x100, 44, 150, 480, Splash 1920x1080).
+  - Never commit Config\UserEngine.ini (Partner Center identity).

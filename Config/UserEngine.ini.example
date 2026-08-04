@@ -1,0 +1,17 @@
+; Template for Config/UserEngine.ini (gitignored).
+; Copy to UserEngine.ini and fill from Partner Center -> Game setup -> Identity details.
+
+[/Script/MSGamingSupport.MSGamingSettings]
+PackageName=
+PublisherName=
+PublisherDisplayName=MazenX
+DefaultDisplayName=Crazy Kix
+StoreId=
+TitleId=
+PrimaryServiceConfigId=
+MSAAppId=
+PackageVersion=1.0.0.0
+
+[OnlineSubsystemGDK]
+bEnabled=True
+PrimaryServiceConfigId=
