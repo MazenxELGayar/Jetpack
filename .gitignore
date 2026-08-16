@@ -22,6 +22,7 @@ Build/
 
 # Keep GDK store packaging assets tracked (override Build/ ignore)
 !Build/Windows/
+!Build/Windows/Application.ico
 !Build/Windows/MSGaming/
 !Build/Windows/MSGaming/Resources/
 !Build/Windows/MSGaming/Resources/**

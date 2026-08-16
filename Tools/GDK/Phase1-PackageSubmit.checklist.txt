@@ -30,11 +30,13 @@ You already have a working .msixvc from the last build. To rebuild after changes
    Copy (if script archives):
      Packages\Win64_GDK\
 
-3) Local install test (optional)
-   Open "GDK Command Prompts" or set GameDK, then:
-     wdapp install "path\to\your.msixvc"
-     wdapp list
-     wdapp launch <AUMID from wdapp list>
+3) Local install test
+   Double-click Tools\GDK\Install-Win64-MSIXVC.bat
+   It asks: "Where do you want to install the game?"
+   Type any folder, for example F:\Games\CrazyKix
+   Enable Windows Developer Mode if wdapp asks.
+   The .msixvc is copied next to that folder as Installation; the game installs to the path you typed.
+   Then: wdapp list  /  wdapp launch <AUMID>
 
 4) Upload yourself
    Partner Center -> Crazy Kix -> Packages -> upload the .msixvc
@@ -43,6 +45,8 @@ You already have a working .msixvc from the last build. To rebuild after changes
 Notes
   - This Partner Center product is Win32 Microsoft Store. Xbox / full Xbox services
     still need ID@Xbox + concept approval.
-  - Placeholder logos are in Build\Windows\MSGaming\Resources\ — replace with real art
-    before final submit (Store 100x100, 44, 150, 480, Splash 1920x1080).
+  - Store logos were generated from Content\Assets\Images\Icon.png and
+    IMG_Kix1920_1080.png into Build\Windows\MSGaming\Resources\
+    Re-run Package-Win64-MSIXVC.bat so the .msixvc includes them.
+    To regenerate: Tools\GDK\Generate-MSGamingResources.ps1
   - Never commit Config\UserEngine.ini (Partner Center identity).
