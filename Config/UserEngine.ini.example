@@ -1,5 +1,7 @@
 ; Template for Config/UserEngine.ini (gitignored).
 ; Copy to UserEngine.ini and fill from Partner Center -> Game setup -> Identity details.
+; Leave TitleId / MSAAppId / PrimaryServiceConfigId blank unless you ship Xbox Live sign-in.
+; If those fields are set, MicrosoftGame.config triggers Xbox services and cert will test sign-in.
 
 [/Script/MSGamingSupport.MSGamingSettings]
 PackageName=
@@ -7,11 +9,7 @@ PublisherName=
 PublisherDisplayName=MazenX
 DefaultDisplayName=Crazy Kix
 StoreId=
-TitleId=
-PrimaryServiceConfigId=
-MSAAppId=
 PackageVersion=1.0.0.0
 
 [OnlineSubsystemGDK]
-bEnabled=True
-PrimaryServiceConfigId=
+bEnabled=False
