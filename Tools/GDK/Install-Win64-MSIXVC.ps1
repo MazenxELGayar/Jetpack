@@ -7,8 +7,8 @@ param(
 $ErrorActionPreference = "Continue"
 $Host.UI.RawUI.WindowTitle = "CrazyKix GDK install"
 
-$DefaultPackage = "F:\Unreal Engine\Projects\CrazyKix\Saved\Packages\Windows\MSGameStore\Shipping\MazenX.CrazyKix_1.2.0.0_x64__3gcvezjzrm1r8.msixvc"
-$ArchivePackage = "F:\Unreal Engine\Projects\CrazyKix\Packages\Win64_GDK\MazenX.CrazyKix_1.2.0.0_x64__3gcvezjzrm1r8.msixvc"
+$DefaultPackage = "F:\Unreal Engine\Projects\CrazyKix\Saved\Packages\Windows\MSGameStore\Shipping\MazenX.CrazyKix_1.3.0.0_x64__3gcvezjzrm1r8.msixvc"
+$ArchivePackage = "F:\Unreal Engine\Projects\CrazyKix\Packages\Win64_GDK\MazenX.CrazyKix_1.3.0.0_x64__3gcvezjzrm1r8.msixvc"
 $GdkBin = "F:\Unreal Engine\Microsoft\GDK\GDK_2604.2.7849\bin\wdapp.exe"
 
 function Repair-GdkPath([string]$Value) {
